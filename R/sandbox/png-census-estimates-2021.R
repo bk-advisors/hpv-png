@@ -40,6 +40,9 @@ national <- results %>%
 
 results <- bind_rows(results, national)
 
+# Write csv
+# write.csv(results, "./data/png_nos_9_to_14_pop_by_prov_2021.csv", row.names = FALSE)
+
 # Create interactive visualization
 hc <- results %>%
   filter(Prov_Name != "NATIONAL TOTAL") %>%
