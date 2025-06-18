@@ -19,6 +19,9 @@ png_adm1 <- pull_dataset("cod-ab-png") %>%
   get_resource(1) %>%
   read_resource(layer = "png_admbnda_adm1_nso_20190508")
 
+# Write csv
+# write.csv(png_adm1, "./data/png_adm1.csv", row.names = FALSE)
+
 
 # Admin - level 2
 png_adm2 <- pull_dataset("cod-ab-png") %>%
