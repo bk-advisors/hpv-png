@@ -104,7 +104,7 @@ anti_join(pop_data_aggregated, png_adm1_pop, by = "ADM1_EN")
 # Let's do a map for adm1 using ggplot
 ggplot(png_adm1_pop) +
   geom_sf() +
-  theme_minimal()
+  theme_void()
 
 # Fill map with population
 
@@ -112,4 +112,46 @@ ggplot(png_adm1_pop) +
   geom_sf(aes(fill = pop2021)) +
   scale_fill_viridis_c(name = "Population (9-14 Girls)") +
   labs(title = "HPV Vaccine Target Population Density in PNG by Province") +
-  theme_minimal()
+  theme_void()
+
+## Part 4 - PNG Accessibility Challenges
+
+# Add accessibility categories to population data
+geo_accessibility <- data.frame(
+  Province = c(
+    "Southern Highlands Province", "Western Province", "Milne Bay Province", "Manus Province", "Gulf Province",
+    "Enga Province", "Hela Province", "East Sepik Province", "New Ireland Province", "West Sepik (Sandaun) Province",
+    "Chimbu (Simbu) Province", "Eastern Highlands Province", "Morobe Province", "Madang Province",
+    "West New Britain Province", "East New Britain Province", "Central Province", "Jiwaka Province",
+    "Western Highlands Province", "Northern (Oro) Province", "National Capital District",
+    "Autonomous Region of Bougainville"
+  ),
+  Accessibility = c(
+    "Very Hard", "Very Hard", "Very Hard", "Very Hard", "Hard",
+    "Hard", "Hard", "Hard", "Hard", "Moderate",
+    "Moderate", "Moderate", "Moderate", "Moderate", "Moderate",
+    "Easier", "Easier", "Easier", "Easier", "Easier", 
+    "Easiest", "Moderate"
+  )
+)
+
+
+
+# left join to shapefile
+png_adm1_pop_access <- png_adm1_pop %>% 
+  left_join(geo_accessibility, by = c("ADM1_EN" = "Province")) %>%
+  mutate(Accessibility = factor(Accessibility, 
+                                levels = c("Very Hard", "Hard", "Moderate", "Easier", "Easiest")))
+
+# Create accessibility map
+ggplot(png_adm1_pop_access) +
+  geom_sf(aes(fill = Accessibility), color = "white") +
+  scale_fill_manual(values = c("Very Hard" = "#e41a1c", 
+                               "Hard" = "#ff7f00",
+                               "Moderate" = "#ffff33", 
+                               "Easier" = "#4daf4a",
+                               "Easiest" = "#377eb8")) +
+  labs(title = "HPV Vaccine Delivery Accessibility in PNG",
+       subtitle = "Based on topography and infrastructure challenges",
+       caption = "Source: Lowy Institute: Infrastructure Challenges of PNG, 2017") +
+  theme_void()

@@ -161,5 +161,85 @@ ggplot(cervical_data, aes(x = reorder(country, -mortality),
   )
 
 
-## Slide 3: Vaccination is the most powerful tool to reduce cervical cancer deaths, and the HPV vaccine translates to about 17.4 deaths averted per 1,000 vaccinated
+## Slide 4: The Impact of the HPV vaccine - 17.4 deaths averted per 1000 vaccinated
 
+
+# Parameters
+start_year <- 2024
+end_year <- 2070
+catchup_year <- 2026
+initial_cohort <- 800000  # 9-14 year olds in 2026
+annual_cohort <- 80000    # 9-year olds in 2027
+growth_rate <- 0.018      # 1.8% annual population growth
+deaths_averted_per_thousand <- 17.4
+
+# Calculate vaccinated cohorts over time
+years <- start_year:end_year
+cohort_size <- numeric(length(years))
+cohort_size[years == catchup_year] <- initial_cohort
+
+# Project routine vaccination cohorts (growing at 1.8% annually)
+for (i in 1:length(years)) {
+  if (years[i] > catchup_year) {
+    years_since_catchup <- years[i] - catchup_year
+    cohort_size[i] <- annual_cohort * (1 + growth_rate)^years_since_catchup
+  }
+}
+
+# Calculate deaths averted (using Gavi metric)
+deaths_averted <- cohort_size * (deaths_averted_per_thousand / 1000)
+
+# Create data frame
+vacc_data <- data.frame(
+  Year = years,
+  Cohort_Size = round(cohort_size),
+  Deaths_Averted = round(deaths_averted)
+)
+
+# Filter to vaccination period (2026-2070)
+vacc_data <- vacc_data %>% filter(Year >= catchup_year)
+
+# Calculate cumulative lives saved
+vacc_data <- vacc_data %>% 
+  mutate(Cumulative_Averted = cumsum(Deaths_Averted))
+
+# Summary for visualization
+summary_data <- data.frame(
+  Metric = c("Girls Vaccinated", "Lives Saved"),
+  Total = c(sum(vacc_data$Cohort_Size), sum(vacc_data$Deaths_Averted))
+)
+
+# Visualization 1: Bar chart of total impact
+ggplot(summary_data, aes(x = Metric, y = Total, fill = Metric)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = comma(Total)), 
+            vjust = -0.5, size = 6, fontface = "bold") +
+  scale_fill_manual(values = c("#3498DB", "#2ECC71")) +
+  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.1))) +
+  labs(title = "Total Impact of HPV Vaccination in Papua New Guinea (2026-2070)",
+       subtitle = "Based on Gavi estimate: 17.4 deaths averted per 1,000 vaccinated girls",
+       caption = "Assumptions:\n- 2026: 800,000 girls vaccinated (9-14 year olds)\n- 2027-2070: 80,000 9-year-olds vaccinated annually (1.8% annual growth)\n- 44-year projection period") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none",
+        axis.title = element_blank(),
+        plot.title = element_text(face = "bold", size = 18, hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5, color = "gray30", size = 12),
+        plot.caption = element_text(hjust = 0, color = "gray30"))
+
+# Visualization 2: Cumulative lives saved over time
+ggplot(vacc_data, aes(x = Year, y = Cumulative_Averted)) +
+  geom_area(fill = "#27AE60", alpha = 0.7) +
+  geom_line(color = "#145A32", linewidth = 1.5) +
+  geom_point(data = . %>% filter(Year %% 10 == 0), 
+             color = "#145A32", size = 3) +
+  scale_y_continuous(labels = comma, name = "Cumulative Lives Saved") +
+  scale_x_continuous(breaks = seq(2025, 2070, 5)) +
+  labs(title = "Projected Cumulative Lives Saved from HPV Vaccination",
+       subtitle = "Papua New Guinea, 2026-2070",
+       caption = paste("Total projected lives saved by 2070:", 
+                       comma(sum(vacc_data$Deaths_Averted)))) +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank(),
+        plot.title = element_text(face = "bold", size = 16),
+        axis.title.x = element_text(margin = margin(t = 10)),
+        axis.title.y = element_text(margin = margin(r = 10)))
