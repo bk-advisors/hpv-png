@@ -12,6 +12,8 @@ raw_data <- read_excel(xlsx_path, sheet = 1, col_names = FALSE)
 #raw_data <- read_excel("png-pop-data-by-province-n-age.xlsx", 
                        #sheet = "Sheet1", col_names = FALSE)
 
+
+
 # Modified processing function
 process_province <- function(start_row, province_name, districts) {
   n_districts <- length(districts)
@@ -80,6 +82,3 @@ tidy_data <- bind_rows(western, gulf) %>%
 
 # Verify results
 glimpse(tidy_data)
-
-
-write_csv(tidy_data, "png_tidy_population_data.csv")
