@@ -1,0 +1,186 @@
+Cancer code,Country code (ISO/UN),Alpha‑3 code,Label,Sex,Type,Total
+23,4,AFG,Afghanistan,2,1,888
+23,8,ALB,Albania,2,1,97
+23,12,DZA,Algeria,2,1,1013
+23,24,AGO,Angola,2,1,1715
+23,31,AZE,Azerbaijan,2,1,325
+23,32,ARG,Argentina,2,1,2559
+23,36,AUS,Australia,2,1,323
+23,40,AUT,Austria,2,1,180
+23,44,BHS,Bahamas,2,1,33
+23,48,BHR,Bahrain,2,1,8
+23,50,BGD,Bangladesh,2,1,5826
+23,51,ARM,Armenia,2,1,99
+23,52,BRB,Barbados,2,1,24
+23,56,BEL,Belgium,2,1,231
+23,64,BTN,Bhutan,2,1,26
+23,68,BOL,Bolivia (Plurinational State of),2,1,1138
+23,70,BIH,Bosnia Herzegovina,2,1,151
+23,72,BWA,Botswana,2,1,253
+23,76,BRA,Brazil,2,1,9905
+23,84,BLZ,Belize,2,1,24
+23,90,SLB,Solomon Islands,2,1,48
+23,96,BRN,Brunei Darussalam,2,1,16
+23,100,BGR,Bulgaria,2,1,453
+23,104,MMR,Myanmar,2,1,4374
+23,108,BDI,Burundi,2,1,1081
+23,112,BLR,Belarus,2,1,371
+23,116,KHM,Cambodia,2,1,670
+23,120,CMR,Cameroon,2,1,1837
+23,124,CAN,Canada,2,1,760
+23,132,CPV,Cape Verde,2,1,27
+23,140,CAF,Central African Republic,2,1,240
+23,144,LKA,Sri Lanka,2,1,946
+23,148,TCD,Chad,2,1,841
+23,152,CHL,Chile,2,1,825
+23,160,CHN,China,2,1,55694
+23,170,COL,Colombia,2,1,2435
+23,174,COM,Comoros,2,1,102
+23,178,COG,"Congo, Republic of",2,1,248
+23,180,COD,"Congo, Democratic Republic of",2,1,6187
+23,188,CRI,Costa Rica,2,1,167
+23,191,HRV,Croatia,2,1,138
+23,192,CUB,Cuba,2,1,695
+23,196,CYP,Cyprus,2,1,31
+23,203,CZE,Czechia,2,1,369
+23,204,BEN,Benin,2,1,475
+23,208,DNK,Denmark,2,1,115
+23,214,DOM,Dominican Republic,2,1,622
+23,218,ECU,Ecuador,2,1,939
+23,222,SLV,El Salvador,2,1,367
+23,226,GNQ,Equatorial Guinea,2,1,76
+23,231,ETH,Ethiopia,2,1,5975
+23,232,ERI,Eritrea,2,1,150
+23,233,EST,Estonia,2,1,60
+23,242,FJI,Fiji,2,1,105
+23,246,FIN,Finland,2,1,65
+23,250,FRA,France (metropolitan),2,1,1530
+23,254,GUF,French Guyana,2,1,10
+23,258,PYF,French Polynesia,2,1,6
+23,262,DJI,Djibouti,2,1,54
+23,266,GAB,Gabon,2,1,139
+23,268,GEO,Georgia,2,1,210
+23,270,GMB,The Republic of the Gambia,2,1,204
+23,275,PSE,Gaza Strip and West Bank,2,1,37
+23,276,DEU,Germany,2,1,2071
+23,288,GHA,Ghana,2,1,1815
+23,300,GRC,Greece,2,1,260
+23,312,GLP,"France, Guadeloupe",2,1,16
+23,316,GUM,Guam,2,1,13
+23,320,GTM,Guatemala,2,1,973
+23,324,GIN,Guinea,2,1,1695
+23,328,GUY,Guyana,2,1,65
+23,332,HTI,Haiti,2,1,451
+23,340,HND,Honduras,2,1,669
+23,348,HUN,Hungary,2,1,482
+23,352,ISL,Iceland,2,1,8
+23,356,IND,India,2,1,79906
+23,360,IDN,Indonesia,2,1,20708
+23,364,IRN,"Iran, Islamic Republic of",2,1,743
+23,368,IRQ,Iraq,2,1,216
+23,372,IRL,Ireland,2,1,89
+23,376,ISR,Israel,2,1,142
+23,380,ITA,Italy,2,1,1156
+23,384,CIV,"Côte d'Ivoire",2,1,1461
+23,388,JAM,Jamaica,2,1,236
+23,392,JPN,Japan,2,1,3864
+23,398,KAZ,Kazakhstan,2,1,918
+23,400,JOR,Jordan,2,1,84
+23,404,KEN,Kenya,2,1,3591
+23,408,PRK,"Korea, Democratic People Republic of",2,1,1237
+23,410,KOR,"Korea, Republic of",2,1,1143
+23,414,KWT,Kuwait,2,1,34
+23,417,KGZ,Kyrgyzstan,2,1,278
+23,418,LAO,"Lao People's Democratic Republic",2,1,200
+23,422,LBN,Lebanon,2,1,93
+23,426,LSO,Lesotho,2,1,413
+23,428,LVA,Latvia,2,1,113
+23,430,LBR,Liberia,2,1,478
+23,434,LBY,Libya,2,1,169
+23,440,LTU,Lithuania,2,1,191
+23,442,LUX,Luxembourg,2,1,10
+23,450,MDG,Madagascar,2,1,2690
+23,454,MWI,Malawi,2,1,3340
+23,458,MYS,Malaysia,2,1,1018
+23,462,MDV,Maldives,2,1,26
+23,466,MLI,Mali,2,1,1431
+23,470,MLT,Malta,2,1,6
+23,474,MTQ,"France, Martinique",2,1,14
+23,478,MRT,Mauritania,2,1,302
+23,480,MUS,Mauritius,2,1,67
+23,484,MEX,Mexico,2,1,4909
+23,496,MNG,Mongolia,2,1,156
+23,498,MDA,Republic of Moldova,2,1,236
+23,499,MNE,Montenegro,2,1,32
+23,504,MAR,Morocco,2,1,1468
+23,508,MOZ,Mozambique,2,1,4000
+23,512,OMN,Oman,2,1,56
+23,516,NAM,Namibia,2,1,203
+23,524,NPL,Nepal,2,1,1313
+23,528,NLD,The Netherlands,2,1,275
+23,540,NCL,New Caledonia,2,1,16
+23,548,VUT,Vanuatu,2,1,18
+23,554,NZL,New Zealand,2,1,63
+23,558,NIC,Nicaragua,2,1,345
+23,562,NER,Niger,2,1,440
+23,566,NGA,Nigeria,2,1,7093
+23,578,NOR,Norway,2,1,104
+23,586,PAK,Pakistan,2,1,3069
+23,591,PAN,Panama,2,1,192
+23,598,PNG,Papua New Guinea,2,1,686
+23,600,PRY,Paraguay,2,1,601
+23,604,PER,Peru,2,1,2545
+23,608,PHL,Philippines,2,1,4380
+23,616,POL,Poland,2,1,2188
+23,620,PRT,Portugal,2,1,459
+23,624,GNB,Guinea-Bissau,2,1,157
+23,626,TLS,Timor-Leste,2,1,37
+23,630,PRI,Puerto Rico,2,1,100
+23,634,QAT,Qatar,2,1,13
+23,638,REU,"France, La Réunion",2,1,39
+23,642,ROU,Romania,2,1,1793
+23,643,RUS,Russian Federation,2,1,7903
+23,646,RWA,Rwanda,2,1,609
+23,662,LCA,Saint Lucia,2,1,13
+23,678,STP,Sao Tome and Principe,2,1,10
+23,682,SAU,Saudi Arabia,2,1,164
+23,686,SEN,Senegal,2,1,1327
+23,688,SRB,Serbia,2,1,505
+23,694,SLE,Sierra Leone,2,1,292
+23,702,SGP,Singapore,2,1,153
+23,703,SVK,Slovakia,2,1,276
+23,704,VNM,Viet Nam,2,1,2571
+23,705,SVN,Slovenia,2,1,61
+23,706,SOM,Somalia,2,1,919
+23,710,ZAF,South Africa,2,1,5976
+23,716,ZWE,Zimbabwe,2,1,2318
+23,724,ESP,Spain,2,1,802
+23,728,SSD,South Sudan,2,1,593
+23,729,SDN,Sudan,2,1,738
+23,740,SUR,Suriname,2,1,43
+23,748,SWZ,Eswatini,2,1,269
+23,752,SWE,Sweden,2,1,238
+23,756,CHE,Switzerland,2,1,99
+23,760,SYR,Syrian Arab Republic,2,1,106
+23,762,TJK,Tajikistan,2,1,159
+23,764,THA,Thailand,2,1,4576
+23,768,TGO,Togo,2,1,334
+23,780,TTO,Trinidad and Tobago,2,1,122
+23,784,ARE,United Arab Emirates,2,1,69
+23,788,TUN,Tunisia,2,1,210
+23,792,TUR,Türkiye,2,1,1203
+23,795,TKM,Turkmenistan,2,1,279
+23,800,UGA,Uganda,2,1,4782
+23,804,UKR,Ukraine,2,1,2598
+23,807,MKD,North Macedonia,2,1,61
+23,818,EGY,Egypt,2,1,820
+23,826,GBR,United Kingdom,2,1,1154
+23,834,TZA,"Tanzania, United Republic of",2,1,6832
+23,840,USA,United States of America,2,1,5932
+23,854,BFA,Burkina Faso,2,1,775
+23,858,URY,Uruguay,2,1,160
+23,860,UZB,Uzbekistan,2,1,1585
+23,862,VEN,Venezuela,2,1,2246
+23,882,WSM,Samoa,2,1,6
+23,887,YEM,Yemen,2,1,153
+23,894,ZMB,Zambia,2,1,2285

@@ -112,7 +112,7 @@ ggplot(png_adm1_pop) +
   geom_sf(aes(fill = pop2021)) +
   scale_fill_viridis_c(name = "Population (9-14 Girls)") +
   labs(title = "HPV Vaccine Target Population Density in PNG by Province") +
-  theme_void()
+  theme_void() + facet_wrap(~ADM1_EN, ncol=4)
 
 ## Part 4 - PNG Accessibility Challenges
 

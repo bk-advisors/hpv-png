@@ -1,0 +1,23 @@
+Province,Population
+Bougainville,641431
+Central,362768
+Chimbu,535457
+East New Britain,457169
+East Sepik,681518
+Eastern Highlands,784535
+Enga,571060
+Gulf,201388
+Hela,765142
+Jiwaka,451496
+Madang,797807
+Manus,74547
+Milne Bay,748196
+Morobe,1139789
+NCD,513918
+New Ireland,262681
+Northern (Oro),271193
+Southern Highlands,927306
+West New Britain,836843
+West Sepik,421470
+Western,315273
+Western Highlands,531402
