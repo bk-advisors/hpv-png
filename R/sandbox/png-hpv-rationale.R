@@ -165,10 +165,10 @@ ggplot(cervical_data, aes(x = reorder(country, -mortality),
 
 
 # Parameters
-start_year <- 2024
+start_year <- 2026
 end_year <- 2070
-catchup_year <- 2026
-initial_cohort <- 800000  # 9-14 year olds in 2026
+catchup_year <- 2027
+initial_cohort <- 350000  # 9-14 year olds in 2026
 annual_cohort <- 80000    # 9-year olds in 2027
 growth_rate <- 0.018      # 1.8% annual population growth
 deaths_averted_per_thousand <- 17.4
@@ -218,7 +218,7 @@ ggplot(summary_data, aes(x = Metric, y = Total, fill = Metric)) +
   scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.1))) +
   labs(title = "Total Impact of HPV Vaccination in Papua New Guinea (2026-2070)",
        subtitle = "Based on Gavi estimate: 17.4 deaths averted per 1,000 vaccinated girls",
-       caption = "Assumptions:\n- 2026: 800,000 girls vaccinated (9-14 year olds)\n- 2027-2070: 80,000 9-year-olds vaccinated annually (1.8% annual growth)\n- 44-year projection period") +
+       caption = "Assumptions:\n- 2026: 350,000 girls vaccinated (9-14 year olds), 50% coverage target\n- 2027-2070: 80,000 9-year-olds vaccinated annually (1.8% annual growth), 50% coverage target\n- 44-year projection period") +
   theme_minimal(base_size = 14) +
   theme(legend.position = "none",
         axis.title = element_blank(),
